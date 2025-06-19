@@ -135,17 +135,88 @@ footer {
   margin-bottom: 2rem;
 }
 
-.blog-preview {
+.blog-header {
+  background: #E6E6FA;
+  padding-bottom: 1.5rem;
+}
+
+.blog-title-banner {
+  text-align: center;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.blog-title-banner h1 {
+  font-family: 'Raleway', 'Quicksand', Arial, sans-serif;
+  color: #6D6875;
+  margin-bottom: 0.5rem;
+}
+
+.blog-intro {
+  color: #6D6875;
+  font-size: 1.1rem;
+  margin: 0 auto 1rem auto;
+  max-width: 500px;
+}
+
+.blog-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   background: #F5F5F5;
-  border-radius: 0.5rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 4px rgba(200, 230, 201, 0.08);
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem;
+  margin: 2rem auto 2rem auto;
+  max-width: 700px;
+  font-size: 1rem;
+  box-shadow: 0 1px 6px rgba(200,230,201,0.07);
+}
+
+.tag-btn {
+  background: #fff;
+  color: #6D6875;
+  border: 1px solid #C8E6C9;
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
+  font-family: 'Lato', 'Open Sans', Arial, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tag-btn:hover, .tag-btn.active {
+  background: #C8E6C9;
+  color: #333;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-preview {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(200, 230, 201, 0.10);
+  padding: 1.5rem 1.2rem;
   transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .blog-preview:hover {
   box-shadow: 0 4px 16px rgba(200, 230, 201, 0.18);
+}
+
+.blog-preview img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  background: #F5F5F5;
 }
 
 .blog-preview h3 {
@@ -161,10 +232,13 @@ footer {
 
 #full-post {
   background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 12px rgba(200, 230, 201, 0.08);
-  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(200, 230, 201, 0.10);
+  padding: 2.5rem 2rem;
   margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #full-post h2 {
@@ -176,11 +250,11 @@ footer {
   background: #C8E6C9;
   color: #333;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transition: background 0.2s;
 }
 
@@ -280,5 +354,19 @@ footer {
   }
   .newsletter button {
     width: 100%;
+  }
+  .blog-title-banner {
+    padding: 1.2rem 0 0.3rem 0;
+  }
+  .blog-filters {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .blog-grid {
+    gap: 1rem;
+  }
+  #full-post {
+    padding: 1.2rem 0.5rem;
   }
 } 
