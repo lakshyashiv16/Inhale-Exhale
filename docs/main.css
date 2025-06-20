@@ -174,7 +174,7 @@ footer {
 .tag-btn {
   background: #fff;
   color: #6D6875;
-  border: 1px solid #C8E6C9;
+  border: 1px solid #B3C6E7;
   border-radius: 2rem;
   padding: 0.4rem 1.2rem;
   font-family: 'Lato', 'Open Sans', Arial, sans-serif;
@@ -184,7 +184,7 @@ footer {
 }
 
 .tag-btn:hover, .tag-btn.active {
-  background: #C8E6C9;
+  background: #B3C6E7;
   color: #333;
 }
 
@@ -247,7 +247,7 @@ footer {
 }
 
 #back-to-list {
-  background: #C8E6C9;
+  background: #B3C6E7;
   color: #333;
   border: none;
   padding: 0.5rem 1.2rem;
@@ -288,7 +288,7 @@ footer {
 }
 
 .mantra.highlight-card {
-  background: #C8E6C9;
+  background: #B3C6E7;
   color: #333;
   text-align: center;
 }
@@ -305,7 +305,7 @@ footer {
 
 .newsletter input[type="email"] {
   padding: 0.7rem;
-  border: 1px solid #C8E6C9;
+  border: 1px solid #B3C6E7;
   border-radius: 0.5rem;
   margin-right: 0.5rem;
   font-size: 1rem;
@@ -314,7 +314,7 @@ footer {
 }
 
 .newsletter button {
-  background: #C8E6C9;
+  background: #B3C6E7;
   color: #333;
   border: none;
   padding: 0.7rem 1.5rem;
@@ -326,7 +326,7 @@ footer {
 }
 
 .newsletter button:hover {
-  background: #A5D6A7;
+  background: #AED7F4;
 }
 
 .newsletter-desc {
@@ -339,6 +339,28 @@ footer {
   color: #6D6875;
   font-size: 1.05rem;
   margin-bottom: 1rem;
+}
+
+.audio-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.audio-title {
+  font-size: 1.08rem;
+  color: #6D6875;
+  font-family: 'Raleway', 'Quicksand', Arial, sans-serif;
+  margin-bottom: 0.2rem;
+}
+
+.audio-corner audio {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0.7rem;
+  background: #F5F5F5;
 }
 
 @media (max-width: 700px) {
