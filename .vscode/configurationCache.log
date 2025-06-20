@@ -1,0 +1,1 @@
+{"buildTargets":["deploy","format","lint","serve"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:700,400|Lato:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
     <div class="rotating-quote" id="rotating-quote">Loading quote...</div>
     <header>
         <nav>
@@ -16,21 +17,23 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="story.html">Story</a></li>
                 <li><a href="resources.html">Resources</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Breathe With Me</a></li>
             </ul>
         </nav>
         <h1>Inhale, Exhale</h1>
     </header>
-    <main>
-        <section class="welcome">
+    <main id="main-content">
+        <section class="welcome fade-in">
             <h2>Welcome</h2>
             <p class="intro">Welcome to your calm corner of the internet. This space is for people who want to slow down, breathe, and take care of their minds.</p>
         </section>
-        <section class="mantra highlight-card">
+        <section class="mantra highlight-card fade-in">
             <h3>Mantra of the Week</h3>
             <p id="mantra-of-the-week">Loading mantra...</p>
         </section>
-        <section class="newsletter highlight-card">
+        <section class="newsletter highlight-card fade-in">
             <h3>Join Our Newsletter</h3>
             <form id="newsletter-form" action="#" method="post">
                 <input type="email" name="email" placeholder="Your email" required>
@@ -38,7 +41,7 @@
             </form>
             <p class="newsletter-desc">Get mindful tips, new blog posts, and calming resources in your inbox.</p>
         </section>
-        <section class="audio-corner highlight-card">
+        <section class="audio-corner highlight-card fade-in">
             <h3>Meditation Audio Corner</h3>
             <p class="audio-intro">Take a mindful pause. Listen to a short guided meditation or calming voice clip below.</p>
             <div class="audio-track">
@@ -50,9 +53,15 @@
             </div>
         </section>
     </main>
+    <div class="crisis-banner" role="region" aria-label="Crisis Resources">
+        <span>
+            Need help now? <a href="https://988lifeline.org/" target="_blank" rel="noopener">Call or text 988</a> (Suicide & Crisis Lifeline) or <a href="https://www.crisistextline.org/" target="_blank" rel="noopener">text HOME to 741741</a> for free, confidential support.
+        </span>
+    </div>
     <footer>
         <p>&copy; 2024 Inhale, Exhale. All rights reserved.</p>
     </footer>
+    <button id="scrollToTopBtn" title="Back to top">&#8679;</button>
     <script src="main.js"></script>
 </body>
 </html>

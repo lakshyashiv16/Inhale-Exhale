@@ -5,7 +5,7 @@ A calming, clean website for mindfulness, meditation, and teen mental health adv
 ## Local Dev
 ```bash
 make serve
-# Then go to    http://localhost:8000/
+# Then go to    http://localhost:6060
 ```
 
 ## Deployment

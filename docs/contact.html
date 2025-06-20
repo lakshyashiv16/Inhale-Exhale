@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,400|Lato:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="contact-header">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -18,20 +18,24 @@
         <li><a href="contact.html">Breathe With Me</a></li>
       </ul>
     </nav>
-    <h1>Breathe With Me</h1>
+    <div class="contact-title-banner">
+      <h1>Breathe With Me</h1>
+      <p class="contact-intro">Have a question, want to connect, or just need someone to listen? Reach out below—I'm here for you.</p>
+    </div>
   </header>
   <main>
-    <section class="contact-form">
+    <section class="contact-form-card">
       <h2>Contact</h2>
       <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
         <button type="submit">Send</button>
       </form>
+      <div class="contact-confirmation" style="display:none;">Thank you for reaching out! I'll get back to you soon.</div>
     </section>
   </main>
   <footer>

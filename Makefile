@@ -1,5 +1,5 @@
 serve:
-	python3 -m http.server 8000 --directory docs
+	python3 -m http.server 6060 --directory docs
 
 deploy:
 	@echo "Push /docs to GitHub to deploy via Pages"
