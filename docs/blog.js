@@ -1,30 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const BLOG_API_URL = 'https://script.google.com/macros/s/AKfycbznqXdhiFmukfQM4n0ftVbEXMBpxWyYWxK8byoHA8s-cH8dK2sd_CCM_RtZL4HswRzK/exec';
   const postsContainer = document.getElementById('blog-posts');
   const fullPostSection = document.getElementById('full-post');
   const tagButtons = document.querySelectorAll('.tag-btn');
   let allPosts = [];
 
-  fetch('blog.json')
+  fetch(BLOG_API_URL)
     .then(res => res.json())
     .then(posts => {
-      allPosts = posts;
-      renderPosts(posts);
+      // Ensure Category is always an array
+      allPosts = posts.map(post => {
+        if (typeof post.Category === 'string') {
+          post.Category = post.Category.split(',').map(cat => cat.trim());
+        }
+        return post;
+      });
+      renderPosts(allPosts);
     })
     .catch(() => {
       postsContainer.textContent = 'No blog posts found.';
     });
+
+  function formatDate(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    if (isNaN(date)) return dateString; // fallback
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
 
   function renderPosts(posts) {
     postsContainer.innerHTML = '';
     posts.forEach((post, idx) => {
       const postDiv = document.createElement('div');
       postDiv.className = 'blog-preview';
-      let imgHtml = post.image ? `<img src="${post.image}" alt="${post.title} image">` : '';
       postDiv.innerHTML = `
-        ${imgHtml}
-        <h3><a href="#" data-idx="${idx}">${post.title}</a></h3>
-        <p class="blog-meta">${post.date} | ${post.tags.join(', ')}</p>
-        <p>${post.preview}</p>
+        <h3 class="blog-title"><a href="#" data-idx="${idx}">${post.Title}</a></h3>
+        <div class="blog-meta">
+          <span>${formatDate(post.Date)}</span>
+          ${Array.isArray(post.Category) ? ' | ' + post.Category.join(', ') : ''}
+        </div>
+        <div class="blog-author"><strong>By:</strong> ${post['Author (Full Name)'] || post.Author || ''}</div>
+        <div class="blog-preview-content">${post.Content.substring(0, 180).replace(/(?:\r\n|\r|\n)/g, ' ') + (post.Content.length > 180 ? '...' : '')}</div>
       `;
       postsContainer.appendChild(postDiv);
     });
@@ -45,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tag === 'all') {
         renderPosts(allPosts);
       } else {
-        renderPosts(allPosts.filter(post => post.tags.includes(tag)));
+        renderPosts(allPosts.filter(post => Array.isArray(post.Category) && post.Category.includes(tag)));
       }
       fullPostSection.style.display = 'none';
       postsContainer.style.display = 'grid';
@@ -54,13 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showFullPost(post) {
     fullPostSection.style.display = 'block';
-    let imgHtml = post.image ? `<img src="${post.image}" alt="${post.title} image" style="width:100%;max-height:220px;object-fit:cover;border-radius:0.7rem;margin-bottom:1rem;background:#F5F5F5;">` : '';
     fullPostSection.innerHTML = `
       <button id="back-to-list">&larr; Back to list</button>
-      ${imgHtml}
-      <h2>${post.title}</h2>
-      <p class="blog-meta">${post.date} | ${post.tags.join(', ')}</p>
-      <div>${post.content}</div>
+      <h2>${post.Title}</h2>
+      <p class="blog-meta">${formatDate(post.Date)}${Array.isArray(post.Category) ? ' | ' + post.Category.join(', ') : ''}</p>
+      <p class="blog-author"><strong>By:</strong> ${post['Author (Full Name)'] || post.Author || ''}</p>
+      <div class="blog-content">${post.Content.replace(/(?:\r\n|\r|\n)/g, '<br>')}</div>
     `;
     postsContainer.style.display = 'none';
     document.getElementById('back-to-list').onclick = () => {
