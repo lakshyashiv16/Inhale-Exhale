@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderPosts(posts) {
+    // Sort posts by date descending (most recent first)
+    posts = posts.slice().sort((a, b) => new Date(b.Date) - new Date(a.Date));
     postsContainer.innerHTML = '';
     posts.forEach((post, idx) => {
       const postDiv = document.createElement('div');

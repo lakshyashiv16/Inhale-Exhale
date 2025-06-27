@@ -25,7 +25,8 @@ h1 {
 }
 
 .blog-preview {
-  background: #fff;
+  /* Remove default background so nth-child backgrounds show */
+  background: none;
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(200, 230, 201, 0.10);
   padding: 1.5rem 1.2rem;
@@ -72,4 +73,17 @@ h1 {
   font-size: 1.08rem;
   color: #333;
   margin-bottom: 0.5rem;
+}
+
+.blog-list.blog-grid > .blog-preview:nth-child(4n+1) {
+  background: #F5F7FA;
+}
+.blog-list.blog-grid > .blog-preview:nth-child(4n+2) {
+  background: #FDF6F0;
+}
+.blog-list.blog-grid > .blog-preview:nth-child(4n+3) {
+  background: #F6F8ED;
+}
+.blog-list.blog-grid > .blog-preview:nth-child(4n) {
+  background: #F4F0FA;
 }

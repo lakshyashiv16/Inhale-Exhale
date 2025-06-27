@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Thu Jun 26 10:49:43 2025
+# Make data base, printed on Fri Jun 27 13:57:25 2025
 
 # Variables
 
@@ -66,7 +66,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/ef5eeb47a684b4c217dfaf0463aa7ea952f8ab90
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/5b19bac7a947f54e4caa3eb7e4c5fbf832389850
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -94,7 +94,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = c5d968a99ae042db972d291aeff9d2f0
+CURSOR_TRACE_ID = 5118f0a80c5b476c96f3f621cdf11203
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -114,7 +114,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.75721475.75721481
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.75943705.75943711
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -146,7 +146,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 49912
+VSCODE_PID = 60943
 # variable set hash-table stats:
 # Load=68/1024=7%, Rehash=0, Collisions=3/91=3%
 
@@ -241,7 +241,7 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 26 10:49:43 2025
+# Finished Make data base on Fri Jun 27 13:57:25 2025
 
  
 make: *** No rule to make target `all'.  Stop.
