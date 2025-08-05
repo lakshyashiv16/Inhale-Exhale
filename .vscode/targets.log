@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Fri Jun 27 13:57:25 2025
+
+# Make data base, printed on Mon Aug  4 22:31:40 2025
 
 # Variables
 
@@ -30,6 +33,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/Applications/Cursor.app/Contents/Resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
 # environment
+ 
 _ = /usr/bin/make
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -48,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.XPgGhqICbR/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.xKf7UwE2vr/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -66,7 +70,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/5b19bac7a947f54e4caa3eb7e4c5fbf832389850
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/54c27320fab08c9f5dd5873f07fca101f7a3e070
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -94,7 +98,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = 5118f0a80c5b476c96f3f621cdf11203
+CURSOR_TRACE_ID = 94747cf007434d88a6f51253cefb3844
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -104,7 +108,7 @@ TMPDIR = /var/folders/47/vt2y4mjs7xzb2_x2fk838jlh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.1.-main.sock
+VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.3.-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -114,13 +118,11 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.75943705.75943711
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.79587137.79587143
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -146,9 +148,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 60943
+VSCODE_PID = 13925
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=3/91=3%
+# Load=67/1024=7%, Rehash=0, Collisions=3/90=3%
 
 # Pattern-specific Variable Values
 
@@ -156,7 +158,8 @@ VSCODE_PID = 60943
 
 # Directories
 
-# . (device 16777232, inode 75025451): 9 files, no impossibilities.
+# . (device 16777234, inode 75025451): 9 files, no impossibilities.
+ 
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -241,8 +244,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun 27 13:57:25 2025
+# Finished Make data base on Mon Aug  4 22:31:40 2025
 
  
-make: *** No rule to make target `all'.  Stop.
-
