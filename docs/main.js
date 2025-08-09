@@ -78,6 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Visit counter: show a local fallback when running on localhost
+  const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+  if (isLocalhost) {
+    const visitCounterContainer = document.querySelector('.visit-counter');
+    if (visitCounterContainer) {
+      const current = Number(localStorage.getItem('dev_visit_count') || '0');
+      const next = current + 1;
+      localStorage.setItem('dev_visit_count', String(next));
+      visitCounterContainer.textContent = `Visits (dev): ${next.toLocaleString()}`;
+    }
+  }
+
   // Signup form handler
   const signupForm = document.getElementById('signupForm');
   if (signupForm) {
