@@ -848,6 +848,21 @@ footer {
   text-align: center;
 }
 
+/* Override main background for Pictures page */
+.pictures-main {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Ensure slideshow content is visible */
+.pictures-main .slideshow-container {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 12px rgba(200, 230, 201, 0.1);
+}
+
 .slideshow-container h2 {
   font-family: 'Raleway', 'Quicksand', Arial, sans-serif;
   color: #C8E6C9;
