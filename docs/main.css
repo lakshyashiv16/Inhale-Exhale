@@ -841,4 +841,160 @@ footer {
   .video-container iframe {
     height: 200px;
   }
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  text-align: center;
+}
+
+.slideshow-container h2 {
+  font-family: 'Raleway', 'Quicksand', Arial, sans-serif;
+  color: #C8E6C9;
+  margin-bottom: 1rem;
+}
+
+.slideshow-intro {
+  color: #6D6875;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(179, 198, 231, 0.3);
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.slide-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.slideshow-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prev-btn, .next-btn {
+  background: #C8E6C9;
+  color: #333;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(200, 230, 201, 0.3);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #FFE5B4;
+  transform: scale(1.1);
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background: #E6E6FA;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot:hover, .dot.active {
+  background: #C8E6C9;
+}
+
+.slideshow-info {
+  background: #F5F5F5;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slideshow-info p {
+  color: #6D6875;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Fade animation for slides */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Responsive design for slideshow */
+@media (max-width: 700px) {
+  .slideshow-wrapper {
+    margin: 0 1rem 2rem 1rem;
+  }
+  
+  .slide-image {
+    max-height: 400px;
+  }
+  
+  .slideshow-controls {
+    gap: 0.5rem;
+  }
+  
+  .prev-btn, .next-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .dots-container {
+    gap: 0.3rem;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
 } 

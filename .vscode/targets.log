@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Mon Aug  4 22:31:40 2025
+# Make data base, printed on Wed Aug 13 22:00:21 2025
 
 # Variables
 
@@ -33,7 +33,6 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/Applications/Cursor.app/Contents/Resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
 # environment
- 
 _ = /usr/bin/make
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -70,7 +69,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/54c27320fab08c9f5dd5873f07fca101f7a3e070
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/e50823e9ded15fddfd743c7122b4724130c25df0
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -98,7 +97,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = 94747cf007434d88a6f51253cefb3844
+CURSOR_TRACE_ID = 9ffbe6f776284376a88b090e342f1833
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -108,7 +107,7 @@ TMPDIR = /var/folders/47/vt2y4mjs7xzb2_x2fk838jlh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.3.-main.sock
+VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.4.-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -118,7 +117,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.79587137.79587143
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.80744182.80744188
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -148,7 +147,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 13925
+VSCODE_PID = 75500
 # variable set hash-table stats:
 # Load=67/1024=7%, Rehash=0, Collisions=3/90=3%
 
@@ -159,7 +158,6 @@ VSCODE_PID = 13925
 # Directories
 
 # . (device 16777234, inode 75025451): 9 files, no impossibilities.
- 
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -244,6 +242,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Aug  4 22:31:40 2025
+# Finished Make data base on Wed Aug 13 22:00:21 2025
 
  

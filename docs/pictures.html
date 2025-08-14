@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures - Inhale, Exhale</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,400|Lato:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="guidebook.html">Guidebook</a></li>
+                <li><a href="contact.html">Breathe With Me</a></li>
+            </ul>
+        </nav>
+        <h1>Pictures</h1>
+    </header>
+    <main id="main-content">
+        <section class="slideshow-container fade-in">
+            <h2>Mindful Moments</h2>
+            <p class="slideshow-intro">Take a visual journey through calming and inspiring images. Use the navigation below to explore each picture at your own pace.</p>
+            
+            <!-- Simple test - just one image -->
+            <div style="margin: 2rem 0; padding: 2rem; background: #f0f0f0; border-radius: 0.5rem; text-align: center;">
+                <h3>Testing Image Loading:</h3>
+                <p>If you can see an image below, the paths are working:</p>
+                <img src="https://github.com/user-attachments/assets/8066b4df-1c8f-4c9e-826f-d31c213cbbee?v=1" 
+                     alt="Test image" 
+                     style="max-width: 400px; height: auto; border: 3px solid #333; margin: 1rem 0;">
+                <p><strong>Image URL:</strong> GitHub hosted image 1</p>
+                
+                <hr style="margin: 2rem 0;">
+                
+                <h4>Testing with GitHub hosted image:</h4>
+                <img src="https://github.com/user-attachments/assets/965775d4-9b82-4b87-a3b4-1bd4e1188218?v=1" 
+                     alt="Test image 2" 
+                     style="max-width: 400px; height: auto; border: 3px solid #666; margin: 1rem 0;">
+                <p><strong>Image URL:</strong> GitHub hosted image 2</p>
+            </div>
+            
+            <!-- Slideshow will be added back once we confirm images load -->
+            <div style="margin: 2rem 0; padding: 2rem; background: #e6e6fa; border-radius: 0.5rem; text-align: center;">
+                <h3>Slideshow Coming Soon</h3>
+                <p>Once we confirm the images are loading, the slideshow will be added here.</p>
+            </div>
+        </section>
+    </main>
+    
+    <div class="crisis-banner" role="region" aria-label="Crisis Resources">
+        <span>
+            Need help now? <a href="https://988lifeline.org/" target="_blank" rel="noopener">Call or text 988</a> (Suicide & Crisis Lifeline) or <a href="https://www.crisistextline.org/" target="_blank" rel="noopener">text HOME to 741741</a> for free, confidential support.
+        </span>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Inhale, Exhale. All rights reserved.</p>
+    </footer>
+    
+    <button id="scrollToTopBtn" title="Back to top">&#8679;</button>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(function() {
+            changeSlide(1);
+        }, 5000);
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
