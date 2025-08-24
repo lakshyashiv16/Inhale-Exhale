@@ -78,15 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Visit counter: show a local fallback when running on localhost
-  const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
-  if (isLocalhost) {
-    const visitCounterContainer = document.querySelector('.visit-counter');
-    if (visitCounterContainer) {
+  // Visit counter logic
+  const visitCounterImg = document.getElementById('visit-counter');
+  if (visitCounterImg) {
+    const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+    
+    if (isLocalhost) {
+      // Local development: show local counter
       const current = Number(localStorage.getItem('dev_visit_count') || '0');
       const next = current + 1;
       localStorage.setItem('dev_visit_count', String(next));
-      visitCounterContainer.textContent = `Visits (dev): ${next.toLocaleString()}`;
+      visitCounterImg.style.display = 'none';
+      const visitCounterContainer = document.querySelector('.visit-counter');
+      if (visitCounterContainer) {
+        visitCounterContainer.innerHTML = `<span>Visits (dev): ${next.toLocaleString()}</span>`;
+      }
+    } else {
+      // Production: use the hits counter service
+      const currentUrl = encodeURIComponent(window.location.href);
+      visitCounterImg.src = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${currentUrl}&title=Visits`;
+      visitCounterImg.style.display = 'inline';
     }
   }
 

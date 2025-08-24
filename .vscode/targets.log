@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Aug 13 22:00:21 2025
+# Make data base, printed on Sun Aug 24 11:02:02 2025
 
 # Variables
 
@@ -44,6 +44,7 @@ __CFBundleIdentifier = com.todesktop.230313mzl4w4u92
 INFOPATH = /opt/homebrew/share/info:
 # environment
 VSCODE_CWD = /
+ 
 # environment
 PATH = /Users/arnavnadar/.codeium/windsurf/bin:/Users/arnavnadar/gems/bin:/Users/arnavnadar/.rbenv/shims:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/arnavnadar/.spicetify
 # environment
@@ -51,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.xKf7UwE2vr/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.LT2RKpT4rs/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -69,7 +70,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/e50823e9ded15fddfd743c7122b4724130c25df0
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/af58d92614edb1f72bdd756615d131bf8dfa5290
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -97,7 +98,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = 9ffbe6f776284376a88b090e342f1833
+CURSOR_TRACE_ID = 937ffe18419f4acf9fd72c732e7dc22f
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -117,11 +118,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.80744182.80744188
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.81097305.81097311
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -147,9 +150,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 75500
+VSCODE_PID = 33210
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=3/90=3%
+# Load=68/1024=7%, Rehash=0, Collisions=3/91=3%
 
 # Pattern-specific Variable Values
 
@@ -242,6 +245,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug 13 22:00:21 2025
+# Finished Make data base on Sun Aug 24 11:02:02 2025
 
  
