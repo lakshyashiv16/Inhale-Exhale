@@ -78,28 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Visit counter logic
-  const visitCounterImg = document.getElementById('visit-counter');
-  if (visitCounterImg) {
-    const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
-    
-    if (isLocalhost) {
-      // Local development: show local counter
-      const current = Number(localStorage.getItem('dev_visit_count') || '0');
-      const next = current + 1;
-      localStorage.setItem('dev_visit_count', String(next));
-      visitCounterImg.style.display = 'none';
-      const visitCounterContainer = document.querySelector('.visit-counter');
-      if (visitCounterContainer) {
-        visitCounterContainer.innerHTML = `<span>Visits (dev): ${next.toLocaleString()}</span>`;
-      }
-    } else {
-      // Production: use the hits counter service
-      const currentUrl = encodeURIComponent(window.location.href);
-      visitCounterImg.src = `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${currentUrl}&title=Visits`;
-      visitCounterImg.style.display = 'inline';
-    }
-  }
+  // Visit counter is now handled by counter.js
+  // The counter logic has been moved to a separate file for better organization
 
   // Signup form handler
   const signupForm = document.getElementById('signupForm');
