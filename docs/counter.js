@@ -82,8 +82,6 @@ class VisitCounter {
       
       visitCounterContainer.innerHTML = `
         <span>Total Visits: ${this.formatCount(count)}</span>
-        <br>
-        <small style="opacity: 0.7; font-size: 0.8rem;">Refreshing this page will increment the counter</small>
       `;
     }
   }
