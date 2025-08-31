@@ -1,59 +1,70 @@
-// Universal Visit Counter for GitHub Pages
+// Universal Visit Counter with Smart Fallbacks
 class VisitCounter {
   constructor() {
-    this.counterId = 'inhale-exhale-website'; // Unique identifier for your site
-    this.countApiUrl = 'https://api.countapi.xyz';
+    this.counterId = 'inhale-exhale-website';
     this.fallbackCount = 0;
+    this.isLocalhost = ['localhost', '127.0.0.1', '::1'].includes(location.hostname);
   }
 
   async increment() {
     try {
-      // Use CountAPI to get and increment the universal counter
-      const response = await fetch(`${this.countApiUrl}/hit/${this.counterId}`);
+      // On localhost, use localStorage for immediate testing
+      if (this.isLocalhost) {
+        console.log('Localhost detected, using localStorage counter');
+        const current = this.getLocalCount();
+        const next = current + 1;
+        this.setLocalCount(next);
+        return next;
+      }
+
+      // On production, try CountAPI first
+      console.log('Production detected, trying CountAPI...');
       
-      if (response.ok) {
-        const data = await response.json();
-        return data.value; // This is the new count after incrementing
-      } else {
-        throw new Error('Failed to fetch from CountAPI');
+      try {
+        const response = await fetch(`https://api.countapi.xyz/hit/${this.counterId}`);
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log('CountAPI increment result:', data);
+          
+          // Store the result locally as backup
+          this.setLocalCount(data.value);
+          return data.value;
+        } else {
+          throw new Error('CountAPI response not ok');
+        }
+      } catch (apiError) {
+        console.log('CountAPI failed, using localStorage fallback');
+        
+        // Fallback to localStorage
+        const current = this.getLocalCount();
+        const next = current + 1;
+        this.setLocalCount(next);
+        return next;
       }
     } catch (error) {
-      console.error('CountAPI error:', error);
-      // Fallback to localStorage if API fails
-      return this.getLocalFallback();
+      console.error('Counter increment error:', error);
+      // Final fallback
+      const current = this.getLocalCount();
+      const next = current + 1;
+      this.setLocalCount(next);
+      return next;
     }
   }
 
-  async getCurrentCount() {
+  getLocalCount() {
     try {
-      // Get current count without incrementing
-      const response = await fetch(`${this.countApiUrl}/get/${this.counterId}`);
-      
-      if (response.ok) {
-        const data = await response.json();
-        return data.value;
-      } else {
-        throw new Error('Failed to get count from CountAPI');
-      }
-    } catch (error) {
-      console.error('CountAPI get error:', error);
-      return this.getLocalFallback();
-    }
-  }
-
-  getLocalFallback() {
-    try {
-      return parseInt(localStorage.getItem('inhale_exhale_fallback_count') || '0');
+      return parseInt(localStorage.getItem('inhale_exhale_visit_count') || '0');
     } catch (error) {
       return this.fallbackCount;
     }
   }
 
-  setLocalFallback(count) {
+  setLocalCount(count) {
     try {
-      localStorage.setItem('inhale_exhale_fallback_count', count.toString());
+      localStorage.setItem('inhale_exhale_visit_count', count.toString());
     } catch (error) {
-      console.error('Failed to save fallback count:', error);
+      console.error('Failed to save to localStorage:', error);
     }
   }
 
@@ -63,7 +74,6 @@ class VisitCounter {
 
   async display() {
     try {
-      // Show loading state
       const visitCounterContainer = document.querySelector('.visit-counter');
       const visitCounterImg = document.getElementById('visit-counter');
       
@@ -78,21 +88,24 @@ class VisitCounter {
           <span>Loading visits...</span>
         `;
         
-        // Get and increment the universal counter
+        // Get the count
         const count = await this.increment();
         
-        // Update display with real count
-        visitCounterContainer.innerHTML = `
-          <span>Total Visits: ${this.formatCount(count)}</span>
-        `;
-        
-        // Store fallback count
-        this.setLocalFallback(count);
+        // Update display
+        if (this.isLocalhost) {
+          visitCounterContainer.innerHTML = `
+            <span>Total Visits (dev): ${this.formatCount(count)}</span>
+          `;
+        } else {
+          visitCounterContainer.innerHTML = `
+            <span>Total Visits: ${this.formatCount(count)}</span>
+          `;
+        }
       }
     } catch (error) {
       console.error('Display error:', error);
       // Show fallback count
-      const fallbackCount = this.getLocalFallback();
+      const fallbackCount = this.getLocalCount();
       const visitCounterContainer = document.querySelector('.visit-counter');
       if (visitCounterContainer) {
         visitCounterContainer.innerHTML = `
@@ -105,6 +118,10 @@ class VisitCounter {
 
 // Initialize counter when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Initializing smart counter...');
+  console.log('Hostname:', location.hostname);
+  console.log('Is localhost:', ['localhost', '127.0.0.1', '::1'].includes(location.hostname));
+  
   const counter = new VisitCounter();
   counter.display();
 });
