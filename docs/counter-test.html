@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Test | Inhale, Exhale</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,400|Lato:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Counter Test</h1>
+        <p>Testing the Google Sheets Universal Counter</p>
+    </header>
+    
+    <main>
+        <section class="test-section">
+            <h2>Counter Status</h2>
+            <p>This page will increment the universal counter and display the current count.</p>
+            
+            <div class="test-info">
+                <h3>What should happen:</h3>
+                <ul>
+                    <li>✅ Counter should increment on each page load</li>
+                    <li>✅ Same number should show across all devices</li>
+                    <li>✅ Number should persist even after browser refresh</li>
+                    <li>✅ Should work even if you close and reopen the browser</li>
+                </ul>
+            </div>
+            
+            <div class="test-actions">
+                <button onclick="location.reload()" class="test-btn">Refresh Page (Test Increment)</button>
+                <button onclick="testCounter()" class="test-btn">Test Counter API</button>
+            </div>
+            
+            <div id="test-results" class="test-results"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Inhale, Exhale. All rights reserved.</p>
+        <p class="visit-counter" aria-live="polite"></p>
+    </footer>
+    
+    <script src="counter.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function testCounter() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = '<p>Testing counter API...</p>';
+            
+            // Test the counter API directly
+            fetch('https://script.google.com/macros/s/AKfycbzuQBrzNVoDljGN46v0RJvYh-I_7js6Cka8qEikXtAys7y-whzay7tjLuC2urvzG2uC/exec')
+                .then(response => response.json())
+                .then(data => {
+                    resultsDiv.innerHTML = `
+                        <p>✅ API Test Successful!</p>
+                        <p>Current count: ${data.count}</p>
+                        <p>Response received: ${JSON.stringify(data)}</p>
+                    `;
+                })
+                .catch(error => {
+                    resultsDiv.innerHTML = `
+                        <p>❌ API Test Failed</p>
+                        <p>Error: ${error.message}</p>
+                        <p>Make sure you've updated the URL in counter.js</p>
+                    `;
+                });
+        }
+    </script>
+    
+    <style>
+        .test-section {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(200, 230, 201, 0.1);
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+        
+        .test-info {
+            background: #E6E6FA;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .test-info ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .test-actions {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .test-btn {
+            background: #C8E6C9;
+            color: #333;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+        
+        .test-btn:hover {
+            background: #A5D6A7;
+        }
+        
+        .test-results {
+            background: #F5F5F5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-family: monospace;
+        }
+    </style>
+</body>
+</html>
