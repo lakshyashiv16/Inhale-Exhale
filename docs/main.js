@@ -78,8 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Visit counter is now handled by counter.js
-  // The counter logic has been moved to a separate file for better organization
+
 
   // Signup form handler
   const signupForm = document.getElementById('signupForm');
