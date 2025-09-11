@@ -78,6 +78,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Newsletter form handler
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      const messageDiv = document.getElementById('newsletter-message');
+      
+      if (email) {
+        // Show loading message
+        messageDiv.style.display = 'block';
+        messageDiv.textContent = 'Redirecting to newsletter signup...';
+        messageDiv.style.background = '#FFE5B4';
+        
+        // Create pre-filled Google Form URL
+        const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdmZasQphfd4TtZQOZRIckdV_sKQcMdNazxdieUb3hlvHHHNw/viewform';
+        const prefillUrl = `${baseUrl}?entry.1700432407=${encodeURIComponent(email)}`;
+        
+        // Redirect to Google Form after a short delay
+        setTimeout(() => {
+          window.open(prefillUrl, '_blank');
+          messageDiv.textContent = 'Thank you! Please complete the signup in the new tab.';
+          messageDiv.style.background = '#C8E6C9';
+          newsletterForm.reset();
+        }, 1000);
+      }
+    });
+  }
+
 
 
   // Signup form handler
