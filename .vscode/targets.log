@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sun Aug 31 14:28:47 2025
+# Make data base, printed on Sat Sep 20 13:40:19 2025
 
 # Variables
 
@@ -26,7 +26,6 @@ VSCODE_PROCESS_TITLE = extension-host [1-1]
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
- 
 # makefile
 CURDIR := /Users/arnavnadar/vscode/InhaleExhale
 # makefile
@@ -52,7 +51,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.LT2RKpT4rs/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ygJ5ieaQFc/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -62,6 +61,8 @@ HOMEBREW_CELLAR = /opt/homebrew/Cellar
 # environment
 GEM_HOME = /Users/arnavnadar/gems
 # environment
+OSLogRateLimit = 64
+# environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 MANPATH = /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man:/Library/Developer/CommandLineTools/usr/share/man:/Library/Developer/CommandLineTools/Toolchains/XcodeDefault.xctoolchain/usr/share/man:
@@ -70,7 +71,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/de327274300c6f38ec9f4240d11e82c3b0660b20
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/2f2737de9aa376933d975ae30290447c910fdf40
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -98,7 +99,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = e50acc00bf8645b48b6f3e3fcd1aa6ae
+CURSOR_TRACE_ID = f5d0ad8ddc754019a1d9d9eafd277252
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -118,7 +119,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.84036221.84036227
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.85779585.85779591
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -150,9 +151,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 236
+VSCODE_PID = 16484
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=3/91=3%
+# Load=69/1024=7%, Rehash=0, Collisions=3/92=3%
 
 # Pattern-specific Variable Values
 
@@ -245,6 +246,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Aug 31 14:28:47 2025
+# Finished Make data base on Sat Sep 20 13:40:19 2025
 
  
