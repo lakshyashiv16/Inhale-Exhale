@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Oct  2 00:25:44 2025
+# Make data base, printed on Sun Nov  9 11:19:06 2025
 
 # Variables
 
@@ -21,10 +21,9 @@ make: *** No rule to make target `all'.  Stop.
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_PROCESS_TITLE = extension-host  [1-1]
+VSCODE_PROCESS_TITLE = extension-host  [2-3]
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
- 
 # automatic
 @F = $(notdir $@)
 # makefile
@@ -37,6 +36,8 @@ VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":
 _ = /usr/bin/make
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+VSCODE_PID = 5989
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -52,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Er3u5gx5Cq/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.pmmjrLSpS6/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -72,7 +73,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/b753cece5c67c47cb5637199a5a5de2b7100c180
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/fe5d1728063e86edeeda5bebd2c8e14bf4d0f960
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -100,7 +101,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = 66d1f542cc7c4330878074719321af1b
+CURSOR_TRACE_ID = 8027506c32df40baac754183b8245fe9
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -110,7 +111,7 @@ TMPDIR = /var/folders/47/vt2y4mjs7xzb2_x2fk838jlh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.6.-main.sock
+VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/1.7.-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -120,7 +121,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.87725809.87725815
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.91388452.91388458
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -129,7 +130,6 @@ HOMEBREW_PREFIX = /opt/homebrew
 VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
- 
 # environment
 HOMEBREW_REPOSITORY = /opt/homebrew
 # environment
@@ -153,9 +153,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 17776
+APPLICATIONINSIGHTS_CONFIGURATION_CONTENT = {}
 # variable set hash-table stats:
-# Load=69/1024=7%, Rehash=0, Collisions=3/92=3%
+# Load=70/1024=7%, Rehash=0, Collisions=4/93=4%
 
 # Pattern-specific Variable Values
 
@@ -163,7 +163,7 @@ VSCODE_PID = 17776
 
 # Directories
 
-# . (device 16777232, inode 75025451): 9 files, no impossibilities.
+# . (device 16777231, inode 75025451): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -248,6 +248,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Oct  2 00:25:44 2025
+# Finished Make data base on Sun Nov  9 11:19:06 2025
 
  
