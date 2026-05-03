@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sun Nov 30 14:45:15 2025
+# Make data base, printed on Sun May  3 11:16:35 2026
 
 # Variables
 
@@ -21,7 +18,7 @@ make: *** No rule to make target `all'.  Stop.
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_PROCESS_TITLE = extension-host  [1-1]
+VSCODE_PROCESS_TITLE = extension-host (user) [2-5]
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -39,19 +36,21 @@ _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
+CURSOR_EXTENSION_HOST_ROLE = user
+# environment
 __CFBundleIdentifier = com.todesktop.230313mzl4w4u92
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /Users/arnavnadar/.codeium/windsurf/bin:/Users/arnavnadar/gems/bin:/Users/arnavnadar/.rbenv/shims:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/arnavnadar/.spicetify
+PATH = /Users/arnavnadar/.local/bin:/Users/arnavnadar/.local/gems/bin:/opt/homebrew/opt/ruby/bin:/Users/arnavnadar/.codeium/windsurf/bin:/Users/arnavnadar/gems/bin:/Users/arnavnadar/.rbenv/shims:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Users/arnavnadar/.spicetify
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.EUH3dN8kW9/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.2Lkq5xp7Ac/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -61,11 +60,9 @@ PWD = /Users/arnavnadar/vscode/InhaleExhale
 # environment
 HOMEBREW_CELLAR = /opt/homebrew/Cellar
 # environment
-GEM_HOME = /Users/arnavnadar/gems
+GEM_HOME = /Users/arnavnadar/.local/gems
 # environment
 OSLogRateLimit = 64
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 MANPATH = /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man:/Library/Developer/CommandLineTools/usr/share/man:/Library/Developer/CommandLineTools/Toolchains/XcodeDefault.xctoolchain/usr/share/man:
 # environment
@@ -73,7 +70,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/63fcac100bd5d5749f2a98aa47d65f6eca61db30
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Cursor/CachedData/618c607a249dd7fd2ffc662c6531143833bebd40
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -101,7 +98,7 @@ USER = arnavnadar
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-CURSOR_TRACE_ID = cd02449e0a874c49b0c25f1561689115
+CURSOR_TRACE_ID = 4bc47ecb27d34bc8820a1c08ed221c45
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
@@ -113,7 +110,7 @@ TMPDIR = /var/folders/47/vt2y4mjs7xzb2_x2fk838jlh0000gn/T/
 # environment
 CURSOR_SPAWN_CHAIN = jlwoolf.makefile-tools-nameable
 # environment
-VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/2.0.-main.sock
+VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Cursor/2.4.-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -123,7 +120,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.96917055.96917061
+XPC_SERVICE_NAME = application.com.todesktop.230313mzl4w4u92.113923513.113924069
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -155,7 +152,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1904
+VSCODE_PID = 83901
 # variable set hash-table stats:
 # Load=71/1024=7%, Rehash=0, Collisions=4/94=4%
 
@@ -165,7 +162,7 @@ VSCODE_PID = 1904
 
 # Directories
 
-# . (device 16777234, inode 75025451): 9 files, no impossibilities.
+# . (device 16777233, inode 75025451): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -250,6 +247,8 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Nov 30 14:45:15 2025
+# Finished Make data base on Sun May  3 11:16:35 2026
 
  
+make: *** No rule to make target `all'.  Stop.
+
