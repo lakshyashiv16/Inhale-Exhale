@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lakshyashiv16.github.io/Inhale-Exhale/sitemap.xml
