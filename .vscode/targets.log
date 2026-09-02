@@ -7,10 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'.  Stop.
+Makefile:12: *** missing separator.  Stop.
 
 
-# Make data base, printed on Wed Aug  5 19:27:55 2026
+# Make data base, printed on Tue Sep  1 02:43:47 2026
 
 # Variables
 
@@ -75,7 +75,7 @@ HOME = /Users/arnavnadar
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Code/CachedData/8a7abeba6e03ea3af87bfbce9a1b7e48fed567b8
+VSCODE_CODE_CACHE_PATH = /Users/arnavnadar/Library/Application Support/Code/CachedData/c2d1b13fdc4a77628e5f3bb70173351c8f2fbad1
 # environment
 LOGNAME = arnavnadar
 # environment
@@ -94,7 +94,6 @@ MAKECMDGOALS := all
 SHLVL = 1
 # environment
 VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
- 
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -116,7 +115,7 @@ TMPDIR = /var/folders/47/vt2y4mjs7xzb2_x2fk838jlh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Code/1.12-main.sock
+VSCODE_IPC_HOOK = /Users/arnavnadar/Library/Application Support/Code/1.13-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -126,13 +125,11 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.151011685.151011691
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.153330747.153330755
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -158,9 +155,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 54647
+VSCODE_PID = 94317
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=3/95=3%
+# Load=71/1024=7%, Rehash=0, Collisions=3/85=4%
 
 # Pattern-specific Variable Values
 
@@ -181,12 +178,9 @@ VSCODE_PID = 54647
 # Not a target:
 all:
 #  Command-line target.
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
 
 # Not a target:
 .SUFFIXES:
@@ -204,12 +198,9 @@ format:
 
 # Not a target:
 Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2025-06-20 13:51:46
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -242,7 +233,7 @@ serve:
 	
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/20=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/9=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -254,6 +245,6 @@ serve:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug  5 19:27:55 2026
+# Finished Make data base on Tue Sep  1 02:43:47 2026
 
  
